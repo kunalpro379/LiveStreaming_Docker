@@ -1,17 +1,17 @@
 const NodeMediaServer = require("node-media-server");
 
 const httpConfig = {
-  port: 8000, // HTTP port
-  allow_origin: "*", // Allow requests from any origin (you may restrict this as needed)
-  mediaroot: "./media", // Directory where the server will look for media files
+  port: 8000, 
+  allow_origin: "*",-
+  mediaroot: "./media", 
 };
 
 const rtmpConfig = {
-  port: 1935, // RTMP port, 1935 is the default port for RTMP
-  chunk_size: 60000, // The size in bytes of the chunks into which the media file will be divided
-  gop_cache: true, // If true, the server will use a GOP (Group of Pictures) cache. This will improve the efficiency of RTMP streaming but will also increase memory usage
-  ping: 10, // Ping interval in seconds. This will send a ping message to the client to check if the connection is alive
-  ping_timeout: 60, // Ping timeout in seconds
+  port: 1935, 
+  chunk_size: 60000, 
+  gop_cache: true, 
+  ping: 10, 
+  ping_timeout: 60, 
 };
 
 const transformationConfig = {
